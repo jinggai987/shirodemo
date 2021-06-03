@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>首页</div>
+
+<br><br>
+<h1 th:text="'Hello, ' + ${qqq} + '!'"/>
+
+<a th:href="@{/usr/add}">add </a>| <a th:href="@{/usr/update}">update</a>
+
+</body>
+</html>
