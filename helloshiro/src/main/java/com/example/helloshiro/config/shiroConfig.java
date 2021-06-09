@@ -33,7 +33,9 @@ public class shiroConfig {
          */
 
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        filterChainDefinitionMap.put("/usr/add","perms[user:add]");
         filterChainDefinitionMap.put("/usr/*","authc");
+
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         //设置登陆请求

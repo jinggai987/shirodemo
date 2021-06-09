@@ -2,7 +2,6 @@ package com.example.helloshiro.controller;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -36,6 +35,7 @@ public class ShiroController {
         try {
             // 执行登陆
             currentUser.login(token);
+            model.addAttribute("qqq", username);
             return "index";
         } catch (UnknownAccountException uae) {
             model.addAttribute("msg","用户名错误");
