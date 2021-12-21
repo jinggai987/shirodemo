@@ -8,6 +8,7 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ShiroController {
@@ -26,6 +27,12 @@ public class ShiroController {
     @RequestMapping("/usr/update")
     public String update(){
         return "usr/update";
+    }
+
+    @ResponseBody
+    @RequestMapping("/search")
+    public String search(){
+        return "search";
     }
 
     @RequestMapping("/toLogin")
